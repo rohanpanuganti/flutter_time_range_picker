@@ -539,7 +539,7 @@ class _TimeRangePickerState extends State<TimeRangePicker>
             child: Text(localizations.cancelButtonLabel,
                 style: GoogleFonts.roboto(
                     color: Color.fromRGBO(25, 52, 71, 1),
-                    fontWeight: FontWeight.w700)),
+                    fontWeight: FontWeight.w500)),
             onPressed: _cancel,
           ),
           FlatButton(
@@ -642,7 +642,8 @@ class _TimeRangePickerState extends State<TimeRangePicker>
         children: [
           Column(
             children: [
-              Text(widget.fromText, style: TextStyle(color: activeColor)),
+              Text(widget.fromText,
+                  style: GoogleFonts.ubuntu(color: activeColor)),
               Text(
                 _startTime != null ? _startTime.format(context) : "-",
                 style: _activeTime == ActiveTime.Start
@@ -660,7 +661,7 @@ class _TimeRangePickerState extends State<TimeRangePicker>
             ],
           ),
           Column(children: [
-            Text(widget.toText, style: TextStyle(color: activeColor)),
+            Text(widget.toText, style: GoogleFonts.ubuntu(color: activeColor)),
             Text(
               _endTime != null ? _endTime.format(context) : "-",
               style: _activeTime == ActiveTime.End
