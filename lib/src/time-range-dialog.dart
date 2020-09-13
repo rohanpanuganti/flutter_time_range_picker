@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:time_range_picker/src/clock-gesture-recognizer.dart';
 import 'package:time_range_picker/src/clock-painter.dart';
 import 'package:time_range_picker/src/utils.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 showTimeRangePicker({
   BuildContext context,
@@ -535,11 +536,17 @@ class _TimeRangePickerState extends State<TimeRangePicker>
       ButtonBar(
         children: <Widget>[
           FlatButton(
-            child: Text(localizations.cancelButtonLabel),
+            child: Text(localizations.cancelButtonLabel,
+                style: GoogleFonts.roboto(
+                    color: Color.fromRGBO(25, 52, 71, 1),
+                    fontWeight: FontWeight.w700)),
             onPressed: _cancel,
           ),
           FlatButton(
-            child: Text(localizations.okButtonLabel),
+            child: Text(localizations.okButtonLabel,
+                style: GoogleFonts.roboto(
+                    color: Color.fromRGBO(154, 185, 179, 1),
+                    fontWeight: FontWeight.w700)),
             onPressed: _submit,
           ),
         ],
