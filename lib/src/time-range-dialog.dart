@@ -643,7 +643,8 @@ class _TimeRangePickerState extends State<TimeRangePicker>
           Column(
             children: [
               Text(widget.fromText,
-                  style: GoogleFonts.ubuntu(color: activeColor)),
+                  style: GoogleFonts.ubuntu(
+                      color: activeColor, fontStyle: FontStyle.normal)),
               Text(
                 _startTime != null ? _startTime.format(context) : "-",
                 style: _activeTime == ActiveTime.Start
@@ -661,7 +662,9 @@ class _TimeRangePickerState extends State<TimeRangePicker>
             ],
           ),
           Column(children: [
-            Text(widget.toText, style: GoogleFonts.ubuntu(color: activeColor)),
+            Text(widget.toText,
+                style: GoogleFonts.ubuntu(
+                    color: activeColor, fontStyle: FontStyle.normal)),
             Text(
               _endTime != null ? _endTime.format(context) : "-",
               style: _activeTime == ActiveTime.End
