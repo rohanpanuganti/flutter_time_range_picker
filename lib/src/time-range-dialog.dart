@@ -472,9 +472,7 @@ class _TimeRangePickerState extends State<TimeRangePicker>
   }
 
   _closed() {
-    Navigator.of(context).pop(TimeRange(
-        startTime: TimeOfDay(hour: 0, minute: 0),
-        endTime: TimeOfDay(hour: 0, minute: 0)));
+    Navigator.of(context).pop(TimeRange(startTime: null, endTime: null));
   }
 
   _cancel() {
