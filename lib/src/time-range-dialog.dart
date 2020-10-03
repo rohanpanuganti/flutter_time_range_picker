@@ -471,6 +471,12 @@ class _TimeRangePickerState extends State<TimeRangePicker>
         .pop(TimeRange(startTime: _startTime, endTime: _endTime));
   }
 
+  _closed() {
+    Navigator.of(context).pop(TimeRange(
+        startTime: TimeOfDay(hour: 0, minute: 0),
+        endTime: TimeOfDay(hour: 0, minute: 0)));
+  }
+
   _cancel() {
     Navigator.of(context).pop();
   }
@@ -541,6 +547,13 @@ class _TimeRangePickerState extends State<TimeRangePicker>
                     color: Color.fromRGBO(25, 52, 71, 1),
                     fontWeight: FontWeight.w500)),
             onPressed: _cancel,
+          ),
+          FlatButton(
+            child: Text('CLOSED',
+                style: GoogleFonts.roboto(
+                    color: Color.fromRGBO(154, 185, 179, 1),
+                    fontWeight: FontWeight.w700)),
+            onPressed: _closed,
           ),
           FlatButton(
             child: Text(localizations.okButtonLabel,
