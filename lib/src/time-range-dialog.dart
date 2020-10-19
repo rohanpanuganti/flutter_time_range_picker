@@ -31,7 +31,7 @@ showTimeRangePicker({
   void Function(TimeOfDay) onEndChange,
 
   /// Minimum time steps that can be selected
-  Duration interval = const Duration(minutes: 5),
+  Duration interval = const Duration(minutes: 15),
 
   /// label for start time
   String fromText = "From",
